@@ -112,7 +112,7 @@ void Win32InputManager::_parseConfigSettings( ParamList &paramList )
 	}
 	if( kbSettings == 0 ) kbSettings = DISCL_FOREGROUND | DISCL_NONEXCLUSIVE | DISCL_NOWINKEY;
 	if( mouseSettings == 0 ) mouseSettings = DISCL_FOREGROUND | DISCL_EXCLUSIVE;
-	if( joySettings == 0 ) joySettings = DISCL_FOREGROUND | DISCL_EXCLUSIVE;
+	if( joySettings == 0 ) joySettings = DISCL_BACKGROUND | DISCL_EXCLUSIVE;
 }
 
 //--------------------------------------------------------------------------------//
