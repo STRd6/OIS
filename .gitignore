@@ -9,7 +9,11 @@ config.log
 config.status
 config.sub
 configure
+demos/*.o
 demos/.deps/
+demos/.libs/
+demos/ConsoleApp
+demos/FFConsoleTest
 demos/Makefile
 demos/Makefile.in
 depcomp
@@ -23,5 +27,9 @@ libtool
 ltmain.sh
 missing
 src/.deps/
+src/.libs/
+src/libOIS.la
 src/Makefile
 src/Makefile.in
+src/*.lo
+src/*.o
