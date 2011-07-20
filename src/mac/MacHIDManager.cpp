@@ -213,13 +213,16 @@ HidInfo* MacHIDManager::enumerateDeviceProperties(CFMutableDictionaryRef propert
 	info->type = OISJoyStick;
 	
 	CFStringRef str = getDictionaryItemAsRef<CFStringRef>(propertyMap, kIOHIDManufacturerKey);
-	if (str)
+	if (false) {
+    // TODO: XBox 360 Controller Crashes here
 		info->vendor = CFStringGetCStringPtr(str, CFStringGetSystemEncoding());
-	
+	}
+  
 	str = getDictionaryItemAsRef<CFStringRef>(propertyMap, kIOHIDProductKey);
-	if (str)
+	if (false) {
 		info->productKey = CFStringGetCStringPtr(str, CFStringGetSystemEncoding());
-	
+	}
+  
 	info->combinedKey = info->vendor + " " + info->productKey;
 	
 	//Go through all items in this device (i.e. buttons, hats, sticks, axes, etc)
