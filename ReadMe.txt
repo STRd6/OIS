@@ -59,7 +59,7 @@ Linux/
 	Steps to build on Linux:
 	./bootstrap
 	./configure
-	./make && make install
+	make && make install
 
 	---- Configure build options --------------------------------------------
 	./configure --help              --- List all configure options
@@ -73,4 +73,4 @@ LinuxCB/
 
 Mac/
 	XCode-2.2/
-		Working, mostly complete OSX vackend.
+		Working, mostly complete OSX backend.
