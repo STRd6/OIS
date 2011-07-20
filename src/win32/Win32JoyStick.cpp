@@ -352,6 +352,11 @@ void Win32JoyStick::capture()
 				int axis = (int)(0x0000FFFF & diBuff[i].uAppData); //Mask out the high bit
 				assert( axis >= 0 && axis < (int)mState.mAxes.size() && "Axis out of range!");
 
+        if(axis < 4) {
+          // Fix swapping of x and y for first two pairs of axes
+          axis = axis ^ 1;
+        }
+
 				if(axis >= 0 && axis < (int)mState.mAxes.size())
 				{
 					mState.mAxes[axis].abs = diBuff[i].dwData;
